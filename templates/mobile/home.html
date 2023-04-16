@@ -1,0 +1,15 @@
+
+<div class="_top">
+<img src="{{url_for('static',filename='img/icon.jpeg')}}" onclick="location.href='{{url_for("mobileHome")}}'">
+</div>
+
+<div class="container_">
+	{%for photo in photos %}
+		<div class="row_">
+		<img src="{{url_for('static',filename='assets/snoop.jpeg')}}"></img>
+		<div class="img-text"><span>People</span><span><button class="more_photos">More Photos</button></span></div>
+		</div>
+	{%endfor%}
+</div>
+
+

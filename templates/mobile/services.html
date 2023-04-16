@@ -1,0 +1,39 @@
+
+
+<div class="_top">
+<img src="{{url_for('static',filename='img/icon.jpeg')}}" onclick="location.href='{{url_for("mobileHome")}}'">
+</div>
+
+<div class="container_">
+	<div class="row_ b_">
+	<img src="{{url_for('static',filename='img/clickshots.jpeg')}}"></img>
+	<span class="img-links">
+<a href="#" class="fb"><i class="fa fa-facebook fa-2x"></i></a>
+<a href="#" class="tw"><i class="fa fa-twitter fa-2x"></i></a>
+<a href="#" class="ig"><i class="fa fa-instagram fa-2x"></i></a>
+<a href="#" class="you"><i class="fa fa-youtube fa-2x"></i></a>
+</span><br>
+	<span style="position:absolute;z-index: 2;width: 100%;text-align:center;bottom: 20px;"><button class="img-btn"> Followers<span class="followers">&nbsp; 65.7K </span></button></span>
+	</div>
+	<h3 style="font-weight:bold;">Services</h3>
+	{%for service in services%}
+		<div class="row-box">
+			<div style="margin-top: 30px;">
+			<a href="#"><i class="fa fa-camera fa-2x"></i></a>
+			</div>
+			<div style="margin-top: 30px;">
+			<h3 style="color:white;">Camera</h3>
+			</div>
+			<div>
+			<p>{conetent}</p>
+			<p><a href="#">150</a></p>
+			</div>
+			<div style="position:absolute;bottom: 10px;width: 100%;text-align:center;">
+			<button class="btn-donate">
+			    Book now
+			</button>
+			</div>
+		</div>
+	{%endfor%}<br>
+</div>
+

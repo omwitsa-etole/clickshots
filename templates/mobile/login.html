@@ -1,0 +1,38 @@
+<style>
+
+</style>
+
+<div class="_top">
+<img src="{{url_for('static',filename='img/icon.jpeg')}}" onclick="location.href='{{url_for("mobileHome")}}'">
+</div>
+
+<div class="container_">
+	{%for photo in photos %}
+		<div class="row_">
+		<img src="{{url_for('static',filename='assets/snoop.jpeg')}}"></img>
+		<div class="img-text"><span>People</span><span><button class="more_photos">More Photos</button></span></div>
+		</div>
+	{%endfor%}
+</div>
+<div class="login-box">
+  <p>Login</p>
+  <form>
+    <div class="user-box">
+      <input required="" name="" type="text">
+      <label>Email</label>
+    </div>
+    <div class="user-box">
+      <input required="" name="" type="password">
+      <label>Password</label>
+    </div>
+    <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Submit
+    </a>
+    <a href="#" style="float:right;">Cancel</a>
+  </form>
+  <p>Don't have an account? <a href="#signup" class="a2">Sign up!</a></p>
+</div>

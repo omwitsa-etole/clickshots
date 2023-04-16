@@ -1,0 +1,300 @@
+
+<style>
+.col{
+	position: ;
+}
+.form-control{
+	background: none;
+}
+.contact-box {
+  
+  width: 85%;
+  padding: 40px;
+  margin-left: 15px;
+  
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+.container{
+	
+	 width: 80%;
+	  margin-top: 70px;
+	  text-align:center;
+	  padding-right: 15px;
+	  padding-left: 15px;
+	  margin-right: auto; position:relative;
+	  margin-left: auto;
+}
+.row{
+	position:relative;
+}
+.row-b{
+	position:relative;
+	margin-left: 15px;
+}
+@media (min-width: 900px) {
+	.container{overflow:;}
+	.row {
+	 position:absolute;
+	 width: 50%;
+	 overflow:;
+	 top: 0;
+	 left: 0;
+	 }
+	.rowb {
+	 position:absolute;
+	 right: 5%;
+	 top: 0%;
+	 
+	 }
+	.login-box{
+		margin-left: 0;
+	}
+}
+.container{
+	margin-top: 70px;
+	
+}
+
+
+
+.contact-box p:first-child {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.contact-box .user-box {
+  position: relative;
+}
+
+.contact-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.contact-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.contact-box .user-box input:focus ~ label,
+.contact-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #fff;
+  font-size: 12px;
+}
+
+.contact-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 3px
+}
+
+.contact-box a:hover {
+  background: #fff;
+  color: #272727;
+  border-radius: 5px;
+}
+
+.contact-box a span {
+  position: absolute;
+  display: block;
+}
+
+.login-box a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #fff);
+  animation: btn-anim1 1.5s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.contact-box a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #fff);
+  animation: btn-anim2 1.5s linear infinite;
+  animation-delay: .375s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.contact-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #fff);
+  animation: btn-anim3 1.5s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.contact-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #fff);
+  animation: btn-anim4 1.5s linear infinite;
+  animation-delay: 1.125s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+.contact-box p:last-child {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.contact-box a.a2 {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-box a.a2:hover {
+  background: transparent;
+  color: #aaa;
+  border-radius: 5px;
+}
+
+.user-box textarea{
+	resize:none;
+	width: 100%;
+	height: 120px;
+	  padding: 10px 0;
+	  font-size: 16px;
+	  color: #fff;
+	  margin-bottom: 30px;
+	  border: none;
+	  border-bottom: 1px solid #fff;
+	  outline: none;
+	  background: transparent;
+}
+
+</style>
+
+<div class="_top">
+<img src="{{url_for('static',filename='img/icon.jpeg')}}" onclick="location.href='{{url_for("mobileHome")}}'">
+</div>
+
+<div class="container">
+<div class="col-12 ">
+<h2 class="site-section-heading text-center">Contact</h2>
+</div>
+<div class="row">
+
+<div class="contact-box">
+  <p>Reach Out</p>
+  <form>
+    <div class="user-box">
+      <input required="" name="" type="text">
+      <label>Email</label>
+    </div>
+    <div class="user-box">
+      <input required="" name="" type="text">
+      <label>Phone</label>
+    </div>
+    <div class="user-box">
+      <textarea required="" placeholder="Message" name="" ></textarea>
+     
+    </div>
+    <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Submit
+    </a>
+  </form>
+  
+</div>
+
+</div>
+<style>
+.mb-0{color:white;font-weight:bold;font-size: 23px;}
+.mb-4 a,.mb-0 a{text-decoration:none;color:green;font-size: 16px;}
+</style>
+
+<div class="rowb">
+<div class="col-lg-3 ml-auto">
+<div class="mb-3">
+<p class="mb-0 font-weight-bold text-white">Address</p>
+<p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
+<p class="mb-0 font-weight-bold text-white">Phone</p>
+<p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+<p class="mb-0 font-weight-bold text-white">Email Address</p>
+<p class="mb-0"><a href="#">youremail@domain.com</a></p>
+</div>
+</div>
+</div>
+</div>
+
+

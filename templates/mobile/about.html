@@ -1,0 +1,121 @@
+
+<style>
+.artist_card {
+  margin-left: 10px;
+  margin-top: 20px;
+  width:90%;
+  height: 50%;
+  background: #ddd;
+  transition: 1s ease-in-out;
+  clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.artist_card span {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: block;
+  padding-top: 1em;
+  font-size: 1em;
+}
+
+.artist_card .info {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  padding-top: 0.1em;
+  font-size: 0.72em;
+  margin: 1em;
+  margin-top: 1em;
+}
+
+.artist_img {
+  width:40%;
+  height: 28%;
+  background: white;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 15px;
+}
+.artist_img img{
+	width: 100%;	
+	height: 100%;
+	object-fit:contain;
+	 -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+ 	 filter: grayscale(100%);
+}
+.artist_img img:hover{
+	 -webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+ 	 filter: grayscale(0);
+}
+.artist_card .share {
+  text-align: center;
+  margin-top: 1.8em;
+}
+
+.artist_card a {
+  color: white;
+  transition: .4s ease-in-out;
+}
+
+.artist_card a:hover {
+  color: rgb(36, 116, 221);
+}
+
+.artist_card button {
+  padding: 0.8em 1.7em;
+  display: block;
+  margin: auto;
+  border-radius: 25px;
+  border: none;
+  margin-top: 2em;
+  font-weight: bold;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: .4s ease-in-out;
+}
+
+.artist_card button:hover {
+  background: rgb(36, 116, 221);
+  color: white;
+}
+@media (min-width: 900px) {
+	.artist_card{
+		width: 17em;
+  		height: 22.5em;
+		diplsay: inline-block;margin-left: 12px;
+	}
+}
+
+</style>
+<div class="_top">
+<img src="{{url_for('static',filename='img/icon.jpeg')}}" onclick="location.href='{{url_for("mobileHome")}}'">
+</div>
+
+<div class="container_">
+	<div class="row_ b_">
+	<img src="{{url_for('static',filename='img/clickshots.jpeg')}}"></img>
+	<span class="img-links">
+<a href="#" class="fb"><i class="fa fa-facebook fa-2x"></i></a>
+<a href="#" class="tw"><i class="fa fa-twitter fa-2x"></i></a>
+<a href="#" class="ig"><i class="fa fa-instagram fa-2x"></i></a>
+<a href="#" class="you"><i class="fa fa-youtube fa-2x"></i></a>
+</span>
+	</div><br>
+	<div class="artist_card">
+  	  <div class="artist_img">
+		<img src="{{url_for('static',filename='assets/snoop.jpeg')}}"></img>
+	  </div>
+	  <span>About Me</span>
+	  <p class="info">I’m Walter, a multidisciplinary designer who focuses on telling my clients’ stories visually, through enjoyable and meaningful experiences. I specialize in responsive websites and functional user interfaces.</p>
+	  <div class="share">
+	 
+	 
+	  
+	  </div>
+	  <button>Resume</button>
+	</div>
+</div>

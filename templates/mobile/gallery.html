@@ -1,0 +1,140 @@
+<style>
+.gallery-page{
+	margin-top: 55px;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.gallery-head{
+	width: 100%;
+}
+.gallery-profile{
+	margin-left: 2%;
+}
+.gallery-profile span{
+	display:block;
+	font-weight: bold;
+	font-size: 15px;
+	width: 144px;
+	text-align:center;
+	
+	
+}
+.gallery-profile img{
+	width: 134px;
+	height: 138px;
+	border-radius: 50%;
+}
+.gallery-profile-options{
+	position: absolute;
+	background: #333;	
+        border-radius: 5px;
+ 	display:flex;
+	flex-direction: row;
+	text-align:center;
+	top: 0;
+	height: 150px;
+	right: 2%;	
+	width: 60%;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	justify-content: center;
+}
+.gallery-profile-options span{
+        
+	flex: 1 1 auto;
+	width: 99%;
+	text-align:center;
+	font-weight:bold;
+	font-size: 20px;
+	color:white;
+}
+.gallery-opts{
+	margin-top: 6px;
+	background: #333;	
+	width: 99%;
+	height: 45px;
+	display:flex;
+	flex-direction:row; 
+}
+.gallery-opts span{
+	flex: 1 1 auto;
+	text-align:center;
+	width: 99%;
+	height: 99%;
+	cursor:pointer;
+}
+.gallery-opts span:hover{
+	background: #ddd;
+}
+.gallery-container{
+	margin-top: ;
+	width: 100%;
+	height:100%;
+	height: auto;
+	display:flex;
+	
+	flex-wrap: wrap;
+}
+.gallery-row{
+	flex: 2 auto;
+	object-fit: cover;
+	position:relative;
+	margin-top: 15px;
+	height: 80%;
+	width: 100%;
+	margin-right: 10px
+}
+@media (min-width: 900px) {
+	.gallery-row{width: 32.5%;max-width: 45%;}
+}
+.gallery-row img{
+	width: 100%;
+	height: 100%;
+	
+}
+.opt-active{
+	background: #ddd;
+}
+.dropdown-menu{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 20px auto;
+	transform: translate(-50%, -55%);
+	color:white;
+	z-index: 1;
+	display:none;
+}
+</style>
+
+<div class="gallery-page">
+<div class="gallery-head">
+	<div class="gallery-profile">
+		<span><img src="{{url_for('static',filename='assets/snoop.jpeg')}}"></img></span>
+		<span>Korg</span>
+		<span><i>About</i></span>
+	</div>
+	<div class="gallery-profile-options">
+	<span><p>Orders</p><p>5</p></span>
+	<span><p>Images</p><p>3</p></span>
+	<span><p>Messages</p><p>1</p></span>
+	</div>
+</div>
+<div class="gallery-opts">
+	<span class="opt-active">All</span>
+	<span>Public</span>
+	<span>Private</span>
+	<span>Favourites</span>
+	<span>Trash</span>
+</div>
+<div class="gallery-container">
+	{%for i in photos%}
+	<div class="gallery-row" oncontextmenu="this.children[1].style.display='block';return false;">
+		<img src="{{url_for('static',filename='assets/snoop.jpeg')}}"></img>
+		<div class="dropdown-menu">
+			<span>options</span>
+		</div>
+	</div>
+	{%endfor%}
+</div>
+</div>
